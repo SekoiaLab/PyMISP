@@ -159,7 +159,7 @@ class PyMISP(object):
         messages = []
         if response.get('error'):
             if isinstance(response['error'], list):
-                for e in response['errors']:
+                for e in response['error']:
                     messages.append(e['error']['value'][0])
             else:
                 messages.append(['error'])
